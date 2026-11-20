@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b14">
+<meta name="description" content="Rajnish Kumar — Frontend Developer portfolio, projects, skills and contact information.">
+<title>Rajnish Kumar | Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b14;--panel:#101625;--panel2:#131d30;--text:#f4f7ff;--muted:#a6b0c4;--line:rgba(255,255,255,.1);--a:#8b5cf6;--b:#22d3ee;--green:#53e0b2;--shadow:0 22px 65px rgba(0,0,0,.3)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"DM Sans",sans-serif;color:var(--text);background:radial-gradient(circle at 12% 8%,rgba(139,92,246,.15),transparent 28rem),radial-gradient(circle at 90% 28%,rgba(34,211,238,.1),transparent 30rem),var(--bg);line-height:1.7}
+a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,calc(100% - 42px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(8,11,20,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 1.3rem "Space Grotesk";letter-spacing:-.5px}.brand span{color:var(--b)}
+.nav-links{display:flex;gap:27px;list-style:none}.nav-links a{font-size:.92rem;color:var(--muted);transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--b)}
+.menu{display:none;background:none;border:0;color:white;font-size:1.6rem;cursor:pointer}
+.hero{padding:112px 0 100px;min-height:680px;display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:65px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:50px;padding:7px 13px;color:#b9f7e7;background:rgba(83,224,178,.07);font-size:.8rem;font-weight:700;letter-spacing:.6px}
+.pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(83,224,178,.12)}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif}h1{font-size:clamp(3.3rem,7.5vw,6.2rem);line-height:.99;letter-spacing:-4px;margin:25px 0 22px}h1 span{background:linear-gradient(110deg,var(--a),var(--b));background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{max-width:670px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:31px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 19px;min-height:49px;border-radius:11px;font-weight:700;border:1px solid var(--line);transition:.22s}
+.btn:hover{transform:translateY(-3px)}.primary{background:linear-gradient(120deg,#8054ed,#4f9be9);border:0;color:white;box-shadow:0 12px 30px rgba(112,83,230,.2)}.secondary{background:rgba(255,255,255,.04)}
+.hero-card{position:relative;padding:17px;border:1px solid var(--line);border-radius:27px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.015));box-shadow:var(--shadow);transform:rotate(2deg)}
+.avatar{aspect-ratio:1/1.08;border-radius:19px;display:grid;place-items:center;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.2),transparent 30%),linear-gradient(145deg,#34205d,#123b58);font:700 6rem "Space Grotesk";color:#fff;letter-spacing:-8px}
+.hero-card-caption{display:flex;justify-content:space-between;gap:10px;padding:15px 5px 2px;font-size:.85rem;color:var(--muted)}.hero-card-caption strong{color:var(--text)}
+.quick-links{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.quick-links a{color:var(--muted);font-size:.9rem}.quick-links a:hover{color:var(--b)}
+section{padding:86px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:35px}.kicker{color:var(--b);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-top h2{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;letter-spacing:-1.5px;margin-top:8px}.section-top p{max-width:470px;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:linear-gradient(145deg,rgba(19,29,48,.9),rgba(13,19,32,.92));border:1px solid var(--line);border-radius:19px;padding:27px;box-shadow:var(--shadow)}
+.card h3{font-size:1.28rem;margin-bottom:12px}.card p{color:var(--muted)}.about-copy p+p{margin-top:13px}
+.fact-list{display:grid;gap:14px;margin-top:18px}.fact{display:flex;justify-content:space-between;gap:15px;padding-bottom:12px;border-bottom:1px solid var(--line);font-size:.93rem}.fact span{color:var(--muted)}.fact strong{text-align:right}
+.skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.skill-group{padding:17px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid var(--line)}.skill-group h4{font-size:.92rem;margin-bottom:12px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:.8rem;color:#dbe5f7;background:rgba(255,255,255,.055);border:1px solid var(--line);border-radius:7px;padding:5px 9px}
+.timeline{display:grid;gap:16px}.timeline-item{padding:20px 22px;border-left:2px solid var(--a);background:rgba(255,255,255,.025);border-radius:0 13px 13px 0}.timeline-item small{color:var(--b);font-weight:700}.timeline-item h3{margin:5px 0}.timeline-item p{color:var(--muted);font-size:.94rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{overflow:hidden;padding:0;transition:.25s}.project:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.4)}.project-art{height:150px;display:grid;place-items:center;font-size:3.2rem;background:linear-gradient(135deg,#32215a,#12394c)}.project:nth-child(2) .project-art{background:linear-gradient(135deg,#183a63,#34205d)}.project:nth-child(3) .project-art{background:linear-gradient(135deg,#16483f,#182f54)}.project:nth-child(4) .project-art{background:linear-gradient(135deg,#56371c,#34235a)}.project:nth-child(5) .project-art{background:linear-gradient(135deg,#54223e,#242e5a)}.project:nth-child(6) .project-art{background:linear-gradient(135deg,#173c54,#3d2465)}.project:nth-child(7) .project-art{background:linear-gradient(135deg,#25465b,#3b2865)}
+.project-body{padding:21px}.project-body h3{font-size:1.12rem}.project-body p{color:var(--muted);font-size:.88rem;min-height:62px;margin:8px 0 15px}.project-link{color:var(--b);font-size:.88rem;font-weight:800}.project-link:hover{text-decoration:underline}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{padding:23px}.service-icon{font-size:1.6rem;margin-bottom:12px}.service p{font-size:.9rem}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px}.contact-methods{display:grid;gap:12px;margin-top:18px}.contact-method{display:flex;align-items:center;gap:13px;padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025)}.contact-icon{width:39px;height:39px;display:grid;place-items:center;border-radius:10px;background:rgba(34,211,238,.1);color:var(--b);font-size:1.1rem}.contact-method small{display:block;color:var(--muted);font-size:.76rem}.contact-method strong{font-size:.9rem;overflow-wrap:anywhere}
+.contact-note{color:var(--muted);margin-top:12px;font-size:.85rem}.contact-cta{display:flex;flex-direction:column;justify-content:center;min-height:100%}.contact-cta h3{font-size:2rem;line-height:1.15}.contact-cta p{margin:14px 0 23px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr .7fr;gap:30px}.projects{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.wrap{width:min(100% - 30px,1160px)}.nav-inner{height:68px}.menu{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;width:100%;padding:10px 20px 18px;background:#090d18;border-bottom:1px solid var(--line);flex-direction:column;gap:0}.nav-links.open{display:flex}.nav-links a{display:block;padding:11px 5px}.hero{padding:75px 0 65px;min-height:auto}.hero-grid{grid-template-columns:1fr}.hero-card{width:min(270px,75%);margin:12px auto 0}.avatar{font-size:4.8rem}h1{letter-spacing:-2.5px}.lead{font-size:1rem}section{padding:65px 0}.section-top{display:block}.section-top p{margin-top:13px}.grid2,.contact-grid{grid-template-columns:1fr}.projects,.services{grid-template-columns:1fr}.skill-groups{grid-template-columns:1fr}.project-body p{min-height:0}.footer-inner{justify-content:center;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav-inner">
+<a class="brand" href="#home">Rajnish<span>.dev</span></a>
+<button class="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+<ul class="nav-links">
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#journey">Journey</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+</ul></div></nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div>
+<div class="pill"><span class="pulse"></span> OPEN TO OPPORTUNITIES</div>
+<h1>Hi, I'm<br><span>Rajnish Kumar.</span></h1>
+<p class="lead">A frontend developer who enjoys turning ideas into clean, useful and interactive digital experiences. I build responsive websites and browser-based tools with HTML, CSS and JavaScript.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore My Work ↗</a><a class="btn secondary" href="#contact">Let's Connect</a></div>
+<div class="quick-links"><a href="https://github.com/Rajnish9570" target="_blank" rel="noopener">GitHub ↗</a><a href="#contact">Contact details ↗</a></div>
+</div>
+<div class="hero-card"><div class="avatar">RK</div><div class="hero-card-caption"><strong>Rajnish Kumar</strong><span>Frontend Developer</span></div></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">A little introduction</div><h2>More About Me</h2></div><p>I like learning by building. My focus is on practical web experiences that are simple to use, visually polished and responsive on every screen.</p></div>
+<div class="grid2 reveal">
+<div class="card about-copy"><h3>Who I Am</h3>
+<p>I'm Rajnish Kumar, a Computer Science and Engineering graduate with a strong interest in frontend development and web technologies. I enjoy taking an idea from a simple concept to a working website.</p>
+<p>Most of my projects are built using vanilla HTML, CSS and JavaScript. I pay attention to layout, usability, responsive behaviour and small interactions that make a product feel complete.</p>
+<p>I'm continuously improving my skills, exploring better ways to solve problems and building projects that are useful in everyday life.</p>
+</div>
+<div class="card"><h3>Quick Profile</h3><div class="fact-list">
+<div class="fact"><span>Name</span><strong>Rajnish Kumar</strong></div>
+<div class="fact"><span>Role</span><strong>Frontend Developer</strong></div>
+<div class="fact"><span>Education</span><strong>B.Tech — CSE</strong></div>
+<div class="fact"><span>Location</span><strong>Patna, Bihar, India</strong></div>
+<div class="fact"><span>Primary stack</span><strong>HTML · CSS · JavaScript</strong></div>
+<div class="fact"><span>GitHub</span><strong><a href="https://github.com/Rajnish9570" target="_blank" rel="noopener">Rajnish9570 ↗</a></strong></div>
+</div></div></div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">What I work with</div><h2>Skills & Tools</h2></div><p>Core technologies and practical skills I use while designing and developing my projects.</p></div>
+<div class="card reveal"><div class="skill-groups">
+<div class="skill-group"><h4>Frontend Development</h4><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Responsive Design</span><span class="tag">DOM Manipulation</span></div></div>
+<div class="skill-group"><h4>Tools & Platforms</h4><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Chrome DevTools</span></div></div>
+<div class="skill-group"><h4>Design & Experience</h4><div class="tags"><span class="tag">UI Design</span><span class="tag">Mobile-first Layouts</span><span class="tag">User-friendly Interfaces</span><span class="tag">CSS Animations</span></div></div>
+<div class="skill-group"><h4>Personal Strengths</h4><div class="tags"><span class="tag">Problem Solving</span><span class="tag">Self Learning</span><span class="tag">Creative Thinking</span><span class="tag">Attention to Detail</span></div></div>
+</div></div></div></section>
+
+<section id="journey"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">Learning & growth</div><h2>My Journey</h2></div><p>A continuous learning journey shaped by computer science, hands-on practice and personal projects.</p></div>
+<div class="timeline reveal">
+<div class="timeline-item"><small>EDUCATION</small><h3>B.Tech — Computer Science & Engineering</h3><p>Built a foundation in computer science concepts and developed an interest in creating practical software and web experiences.</p></div>
+<div class="timeline-item"><small>HANDS-ON DEVELOPMENT</small><h3>Learning Through Projects</h3><p>Practising frontend development by creating interactive tools, productivity utilities, games and responsive websites.</p></div>
+<div class="timeline-item"><small>WHAT'S NEXT</small><h3>Growing as a Developer</h3><p>Continuing to strengthen JavaScript, improve code quality and explore new technologies while building a stronger project portfolio.</p></div>
+</div></div></section>
+
+<section id="services"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">What I enjoy building</div><h2>Focus Areas</h2></div><p>Areas of frontend work I enjoy exploring through personal projects and practical development.</p></div>
+<div class="services reveal">
+<div class="card service"><div class="service-icon">🖥️</div><h3>Responsive Websites</h3><p>Clean layouts that adapt smoothly to desktop, tablet and mobile screens.</p></div>
+<div class="card service"><div class="service-icon">⚡</div><h3>Interactive Web Apps</h3><p>Browser-based tools with useful features, dynamic content and smooth interactions.</p></div>
+<div class="card service"><div class="service-icon">🎨</div><h3>UI Improvements</h3><p>Modern visual styling, clear layouts and thoughtful details that improve usability.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">Selected work</div><h2>Featured Projects</h2></div><p>A selection of practical websites and interactive applications I've built using frontend technologies.</p></div>
+<div class="projects">
+<article class="card project reveal"><div class="project-art">💊</div><div class="project-body"><h3>Pill Calculator</h3><p>A focused calculator interface for pill and strip-related calculations.</p><a class="project-link" href="https://rajnish9570.github.io/pillCalculator.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">📔</div><div class="project-body"><h3>Secret Diary</h3><p>A private diary experience with a login interface and browser-based data storage.</p><a class="project-link" href="https://rajnish9570.github.io/secretdiary.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">⌨️</div><div class="project-body"><h3>Typing Test</h3><p>An interactive typing experience to practise speed, accuracy and consistency.</p><a class="project-link" href="https://rajnish9570.github.io/typingTest.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">🗂️</div><div class="project-body"><h3>Document Organizer</h3><p>A frontend utility concept for organising and managing document information.</p><a class="project-link" href="https://rajnish9570.github.io/document-organizer/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">💰</div><div class="project-body"><h3>Salary Management</h3><p>A simple interface for viewing and organising salary and expense details.</p><a class="project-link" href="https://rajnish9570.github.io/salarymanagement.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">🐍</div><div class="project-body"><h3>Neon Snake Game</h3><p>A modern take on the classic Snake game with colourful visuals and controls.</p><a class="project-link" href="https://rajnish9570.github.io/neonSnakegame.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+<article class="card project reveal"><div class="project-art">🧩</div><div class="project-body"><h3>Puzzle Game</h3><p>A visual puzzle challenge designed to test logic, observation and patience.</p><a class="project-link" href="https://rajnish9570.github.io/puzzle.github.io/" target="_blank" rel="noopener">View Live Project ↗</a></div></article>
+</div></div></section>
+
+<section id="contact"><div class="wrap">
+<div class="section-top reveal"><div><div class="kicker">Get in touch</div><h2>Let's Connect</h2></div><p>Have an opportunity, collaboration idea or feedback? I'd be happy to hear from you.</p></div>
+<div class="contact-grid reveal">
+<div class="card"><h3>Contact Information</h3><p>Choose the best way to connect with me. Replace the sample email and phone details below with your real contact information before publishing.</p>
+<div class="contact-methods">
+<a class="contact-method" href="mailto:your.email@example.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>your.email@example.com</strong></span></a>
+<a class="contact-method" href="tel:+910000000000"><span class="contact-icon">☎</span><span><small>Phone</small><strong>+91 XXXXX XXXXX</strong></span></a>
+<a class="contact-method" href="https://github.com/Rajnish9570" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span><small>GitHub</small><strong>github.com/Rajnish9570</strong></span></a>
+<a class="contact-method" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>Add your LinkedIn profile</strong></span></a>
+</div><p class="contact-note">Location: Patna, Bihar, India</p></div>
+<div class="card contact-cta"><div class="kicker">Have something in mind?</div><h3>Let's build something meaningful together.</h3><p>I'm interested in connecting with developers, teams and people who enjoy creating useful digital products. Explore my projects on GitHub or reach out directly.</p><div class="actions"><a class="btn primary" href="https://github.com/Rajnish9570" target="_blank" rel="noopener">Explore GitHub ↗</a><a class="btn secondary" href="mailto:your.email@example.com">Send an Email ↗</a></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Rajnish Kumar. All rights reserved.</span><span>Designed & built with HTML · CSS · JavaScript</span></div></footer>
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.nav-links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.textContent=open?'✕':'☰';menu.setAttribute('aria-expanded',String(open));});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.textContent='☰';menu.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
